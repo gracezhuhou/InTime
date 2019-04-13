@@ -1,0 +1,188 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <include layout="@layout/title_new_time"
+        android:id="@+id/title_newtime" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:text="记录："
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:hint="Typing here"
+                    android:maxLines="2"
+                    android:singleLine="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/edit_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:text="种类："
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+
+                <RadioGroup
+                    android:id="@+id/radiotype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/edit_study"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:text="@string/study"
+                        android:textColor="#8800CD00"
+                        android:textSize="24sp"
+                        android:layout_marginStart="12dp" />
+
+                    <RadioButton
+                        android:id="@+id/edit_life"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/life"
+                        android:textColor="#8800CD00"
+                        android:textSize="24sp"
+                        android:layout_marginStart="5dp" />
+
+                    <RadioButton
+                        android:id="@+id/edit_work"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="@string/work"
+                        android:textColor="#8800CD00"
+                        android:textSize="24sp"
+                        android:layout_marginStart="5dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/begin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="开始时间："
+                android:textColor="#000"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <DatePicker
+                    android:background="#1000FF00"
+                    android:id="@+id/begin_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner">
+                </DatePicker>
+
+                <TimePicker
+                    android:background="#1000FF00"
+                    android:id="@+id/begin_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:timePickerMode="spinner">
+                </TimePicker>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/terminal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="结束时间："
+                android:textColor="#000"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <DatePicker
+                    android:background="#1000FF00"
+                    android:id="@+id/terminal_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_toRightOf="@id/terminal"
+                    android:datePickerMode="spinner"
+                    android:calendarViewShown="false">
+                </DatePicker>
+
+                <TimePicker
+                    android:background="#1000FF00"
+                    android:id="@+id/terminal_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:timePickerMode="spinner">
+                </TimePicker>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/others"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/note"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:layout_marginStart="5dp" />
+
+            <EditText
+                android:id="@+id/note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:hint="@string/typing_something_complementary_here"
+                android:maxLines="3"
+                android:layout_marginStart="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

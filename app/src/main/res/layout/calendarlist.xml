@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <include layout="@layout/title"
+        android:id="@+id/title_calendar"/>
+
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/title_calendar"
+        app:mcv_allowClickDaysOutsideCurrentMonth="true"
+        app:mcv_calendarMode="month"
+        app:mcv_showOtherDates="defaults"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/calendar_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/calendarView"
+        android:layout_above="@id/bottom"/>
+
+    <include layout="@layout/bottom"
+        android:id="@+id/bottom"/>
+
+</RelativeLayout>
+
+

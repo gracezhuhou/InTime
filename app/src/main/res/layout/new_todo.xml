@@ -1,0 +1,195 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <include layout="@layout/title_new_todo"
+        android:id="@+id/title_newtodo" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:hint="@string/type_todolist"
+                android:maxLines="2"
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/edit_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:text="@string/style"
+                android:textColor="#000000"
+                android:textSize="24sp" />
+
+            <RadioGroup
+                android:id="@+id/edit_radiotype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/study"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="@string/study"
+                    android:textColor="#95ff99ff"
+                    android:textSize="24sp"
+                    android:layout_marginStart="12dp" />
+
+                <RadioButton
+                    android:id="@+id/life"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="生活"
+                    android:textColor="#95ff99ff"
+                    android:textSize="24sp"
+                    android:layout_marginStart="5dp" />
+
+                <RadioButton
+                    android:id="@+id/work"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/work"
+                    android:textColor="#95ff99ff"
+                    android:textSize="24sp"
+                    android:layout_marginStart="5dp" />
+            </RadioGroup>
+            <TextView
+                android:id="@+id/edit_priority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="5dp"
+                android:text="@string/priority"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:layout_marginStart="5dp" />
+
+            <RadioGroup
+                android:id="@+id/edit_radiopriority"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp" >
+
+                <RadioButton
+                    android:id="@+id/edit_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/priority1"
+                    android:textColor="#ff00ff"
+                    android:textSize="24sp" />
+
+                <RadioButton
+                    android:id="@+id/edit_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/priority2"
+                    android:textColor="#ff33ff"
+                    android:textSize="24sp" />
+
+                <RadioButton
+                    android:id="@+id/edit_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/priority3"
+                    android:textColor="#89ff00ff"
+                    android:textSize="24sp" />
+
+                <RadioButton
+                    android:id="@+id/edit_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/priority4"
+                    android:textColor="#80ff33ff"
+                    android:textSize="24sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/up_to_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/deadline"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:layout_marginStart="5dp" />
+
+            <DatePicker
+                android:id="@+id/deadline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="30dp"
+                android:background="#10ff00ff"
+                android:datePickerMode="spinner"
+                android:calendarViewShown="false"
+                android:layout_marginStart="25dp" tools:targetApi="lollipop">
+            </DatePicker>
+
+            <TextView
+                android:id="@+id/remind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:gravity="start"
+                android:text="@string/alarm"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:layout_marginStart="5dp" />
+
+            <TimePicker
+                android:id="@+id/todo_alarm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#10ff00ff"
+                android:timePickerMode="spinner"
+                tools:targetApi="lollipop">
+            </TimePicker>
+
+            <TextView
+                android:id="@+id/others"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="30dp"
+                android:text="@string/note"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:layout_marginStart="5dp" />
+
+            <EditText
+                android:id="@+id/note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:hint="@string/typing_something_complementary_here"
+                android:maxLines="3"
+                android:layout_marginStart="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

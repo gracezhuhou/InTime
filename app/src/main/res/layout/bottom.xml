@@ -1,0 +1,114 @@
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/tab_menu"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardCornerRadius="4dp"
+            app:elevation="5dp" >
+
+            <Button
+                android:id="@+id/button_ToDo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f8f8ff"
+                android:drawablePadding="3dp"
+                android:gravity="center"
+                android:text="待办"
+                android:textColor="#000"/>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardCornerRadius="10dp"
+            app:elevation="5dp" >
+
+            <Button
+                android:id="@+id/button_Calendar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f8f8ff"
+                android:drawablePadding="3dp"
+                android:gravity="center"
+                android:textColor="#000"
+                android:text="日程"/>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardCornerRadius="10dp"
+            app:elevation="5dp" >
+
+            <Button
+                android:id="@+id/button_Time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f8f8ff"
+                android:drawablePadding="3dp"
+                android:gravity="center"
+                android:textColor="#000"
+                android:text="时间轴"/>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardCornerRadius="10dp"
+            app:elevation="5dp" >
+
+            <Button
+                android:id="@+id/button_Habit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f8f8ff"
+                android:drawablePadding="3dp"
+                android:gravity="center"
+                android:textColor="#000"
+                android:text="习惯"/>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:cardCornerRadius="10dp"
+            app:elevation="5dp" >
+
+            <Button
+                android:id="@+id/button_Analysis"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f8f8ff"
+                android:drawablePadding="3dp"
+                android:gravity="center"
+                android:textColor="#000"
+                android:text="分析"/>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <!--<View
+        android:id="@+id/div_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#f8f8ff"
+        android:layout_above="@id/tab_menu"/>-->
+

@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <include layout="@layout/title_analysis"
+        android:id="@+id/title_analysis"/>
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/title_analysis">
+
+        <ImageButton
+            android:id="@+id/leftArrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/left"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"/>
+
+        <ImageButton
+            android:id="@+id/rightArrow"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/right"
+            android:layout_margin="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relative"
+        android:layout_above="@id/bottom">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <lecho.lib.hellocharts.view.PieChartView
+                android:id="@+id/pie_chart"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_margin="20dp"/>
+
+            <lecho.lib.hellocharts.view.LineChartView
+                android:id="@+id/line_chart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"/>
+
+            <!--<lecho.lib.hellocharts.view.ColumnChartView
+                android:id="@+id/colume_chart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />-->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/bottom"
+        android:id="@+id/bottom"/>
+
+
+</RelativeLayout>
+
+
+

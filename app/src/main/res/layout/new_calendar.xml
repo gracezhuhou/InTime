@@ -1,0 +1,307 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff">
+
+    <include layout="@layout/title_new_calendar"
+        android:id="@+id/title_calendar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/schedules"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:text="日程："
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/input_schedules"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="40dp"
+                    android:hint="Typing your program here"
+                    android:maxLines="2"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="地点："
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/input_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Typing the location here"
+                    android:maxLines="2"
+                    android:singleLine="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="种类："
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+
+                <RadioGroup
+                    android:id="@+id/calendar_radiotype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/calendar_study"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:text="学习"
+                        android:textColor="#63B8FF"
+                        android:textSize="24sp" />
+
+                    <RadioButton
+                        android:id="@+id/calendar_life"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="生活"
+                        android:textColor="#63B8FF"
+                        android:textSize="24sp" />
+
+                    <RadioButton
+                        android:id="@+id/calendar_work"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="工作"
+                        android:textColor="#63B8FF"
+                        android:textSize="24sp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/begin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/calendar_radiotype"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:text="开始时间："
+                android:textColor="#000"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <DatePicker
+                    android:background="#153A5FCD"
+                    android:id="@+id/begin_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/calendar_radiotype"
+                    android:layout_weight="1"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner">
+                </DatePicker>
+
+                <TimePicker
+                    android:background="#153A5FCD"
+                    android:id="@+id/begin_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/location"
+                    android:layout_weight="4"
+                    android:layout_toRightOf="@id/begin_time"
+                    android:timePickerMode="spinner">
+                </TimePicker>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/terminal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/begin_time"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="结束时间："
+                android:textColor="#000"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <DatePicker
+                    android:background="#153A5FCD"
+                    android:id="@+id/terminal_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/begin_time"
+                    android:layout_weight="1"
+                    android:layout_toRightOf="@id/terminal"
+                    android:datePickerMode="spinner"
+                    android:calendarViewShown="false">
+                </DatePicker>
+
+                <TimePicker
+                    android:background="#153A5FCD"
+                    android:id="@+id/terminal_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/begin_time"
+                    android:layout_weight="4"
+                    android:layout_toRightOf="@id/terminal_date"
+                    android:timePickerMode="spinner">
+                </TimePicker>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/again"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/terminal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="重复："
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+
+                <RadioGroup
+                    android:id="@+id/repeat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/terminal"
+                    android:layout_toRightOf="@id/again"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="无"
+                        android:textColor="#63B8FF"
+                        android:textSize="24sp"/>
+
+                    <RadioButton
+                        android:id="@+id/everyweek"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="每周"
+                        android:textColor="#63B8FF"
+                        android:textSize="24sp"/>
+
+                    <RadioButton
+                        android:id="@+id/everymonth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="每月"
+                        android:textColor="#63B8FF"
+                        android:textSize="24sp"/>
+
+                    <RadioButton
+                        android:id="@+id/everyyear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="每年"
+                        android:textColor="#63B8FF"
+                        android:textSize="24sp"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/remind"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/again"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:gravity="left"
+                android:text="提醒时间："
+                android:textColor="#000"
+                android:textSize="24sp" />
+
+            <TimePicker
+                android:background="#153A5FCD"
+                android:id="@+id/calendar_alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/repeat"
+                android:layout_toRightOf="@id/remind"
+                android:timePickerMode="spinner">
+            </TimePicker>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/others"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/remind"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="备注："
+                    android:textColor="#000"
+                    android:textSize="24sp" />
+
+                <EditText
+                    android:id="@+id/input_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/remind"
+                    android:layout_toRightOf="@id/others"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:hint="Typing something complementary here"
+                    android:maxLines="3"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

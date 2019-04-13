@@ -1,0 +1,27 @@
+﻿<resources>
+    <string name="app_name">InTime</string>
+    <string name="title_activity_bottom">BottomActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_new__to_do">New_ToDo</string>
+    <string name="type_todolist">Type ToDoList</string>
+    <string name="study">学习</string>
+    <string name="style">种类:</string>
+    <string name="life">生活</string>
+    <string name="work">工作</string>
+    <string name="deadline">截止日期：</string>
+    <string name="priority">优先级:</string>
+    <string name="priority1">紧急重要</string>
+    <string name="priority2">紧急非重要</string>
+    <string name="priority3">重要非紧急</string>
+    <string name="priority4">非紧急非重要</string>
+    <string name="typing_something_complementary_here">Typing something complementary here</string>
+    <string name="note">备注：</string>
+    <string name="alarm">提醒时间：</string>
+    <string name="back">☜</string>
+    <string name="addToDo">添加待办</string>
+    <string name="submit">√</string>
+    <string name="picture">TODO</string>
+    <string name="add">+</string>
+</resources>
